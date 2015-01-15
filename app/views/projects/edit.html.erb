@@ -1,0 +1,6 @@
+<h1>Editing project</h1>
+<%= image_tag @project.image.url(:medium) %><%# show which image you are editing%>
+<%= render 'form' %>
+
+<%= link_to 'Show', @project %> |
+<%= link_to 'Back', projects_path %>
