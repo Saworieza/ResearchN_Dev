@@ -24,7 +24,6 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @project.save
     respond_with(@project)
-    #@user = User.create( user_params )
   end
 
   def update

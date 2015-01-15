@@ -12,6 +12,7 @@
   <tbody>
     <% @profiles.each do |profile| %>
       <tr>
+        <td><%= link_to (image_tag profile.image.url(:medium)), profile %></td>
         <td><%= profile.name %></td>
         <td><%= profile.short_description %></td>
         <td><%= link_to 'Show', profile %></td>
@@ -20,7 +21,9 @@
       </tr>
     <% end %>
   </tbody>
+  <hr>
 </table>
+<hr>
 
 <br>
 

@@ -1,5 +1,5 @@
 <h1>Editing blog</h1>
-
+<%= image_tag @blog.image.url(:medium) %><%# show which image you are editing%>
 <%= render 'form' %>
 
 <%= link_to 'Show', @blog %> |
