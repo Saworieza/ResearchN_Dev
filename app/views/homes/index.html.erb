@@ -1,23 +1,317 @@
-<h1>Listing homes</h1>
+<title>Research and Development :: Home</title>
+</head>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<body class="home">
+  
+     
+    <div class="row headline"><!-- Begin Headline -->
+    
+      <!-- Slider Carousel
+        ================================================== -->
+        <div class="span8">
+            <div class="flexslider">
+              <ul class="slides size">
+                <li><%= link_to image_tag("hulk.jpg", alt: "slider") %></a></li>
+                <li><%= link_to image_tag("Nick-Fury.jpg", alt: "slider") %></a></li>
+                <li><%= link_to image_tag("hulk.jpg", alt: "slider") %></a></li>
+                <li><%= link_to image_tag("gallery/slider-img-1.jpg", alt: "slider") %></li>
+                <li><%= link_to image_tag("gallery/slider-img-1.jpg", alt: "slider") %></a></li>
+              </ul>
+            </div>
+        </div>
+        
+        <!-- Headline Text
+        ================================================== -->
+        <div class="span4">
+          <h3>ihub Research. <br />
+            big things in a tiny Space...</h3>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium vulputate magna sit amet blandit.</p>
+            <p>Cras rutrum, massa non blandit convallis, est lacus gravida enim, eu fermentum ligula orci et tortor. In sit amet nisl ac leo pulvinar molestie. Morbi blandit ultricies ultricesCras rutrum, massa non blandit convallis, est lacus gravida enim, eu fermentum ligula orci et tortor. In sit amet nisl ac leo pulvinar molestie. Morbi blandit ultricies ultrices.</p>
+            <a href="#"><i class="icon-plus-sign"></i>Read More</a> 
+        </div>
+    </div><!-- End Headline -->
+    
+    <div class="row gallery-row"><!-- Begin Gallery Row --> 
+      
+      <div class="span12">
+            <h5 class="title-bg">Recent Work 
+                <small>Things we are always proud of</small>
+                <button class="btn btn-mini btn-inverse hidden-phone" type="button">View Portfolio</button>
+            </h5>
+      
+        <!-- Gallery Thumbnails
+        ================================================== -->
 
-  <tbody>
-    <% @homes.each do |home| %>
-      <tr>
-        <td><%= link_to 'Show', home %></td>
-        <td><%= link_to 'Edit', edit_home_path(home) %></td>
-        <td><%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+            <div class="row clearfix no-margin">
+            <ul class="gallery-post-grid holder">
 
-<br>
+                    <!-- Gallery Item 1 -->
+                    <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">
+                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                            <span class="gallery-icons">
+                                <%= link_to image_tag("gallery/gallery-img-1-full.jpg", class: "item-zoom-link lightbox", title: "Custom Illustration", rel: "prettyPhoto" ) %>
+                                <!--<a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>-->
+                                <%#= link_to , class: "item-details-link" %>
+                                <!--<a href="gallery-single.htm" class="item-details-link"></a>-->
+                            </span>
+                        </span>
+                        <a href="gallery-single.htm"><%= image_tag("gallery/gallery-img-1-4col.jpg", alt: "Gallery") %>
+                        </a>
+                        <span class="project-details"><a href="gallery-single.htm">Custom Illustration</a>For an international ad campaign.</span>
+                    </li>
 
-<%= link_to 'New Home', new_home_path %>
+                    <!-- Gallery Item 2 -->
+                    <li class="span3 gallery-item" data-id="id-2" data-type="illustration">
+                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                            <span class="gallery-icons">
+                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
+                                <a href="gallery-single.htm" class="item-details-link"></a>
+                            </span>
+                        </span>
+                        <a href="gallery-single.htm"><%= image_tag("gallery/gallery-img-1-4col.jpg", alt: "Gallery") %>
+                        </a>
+                        <span class="project-details"><a href="gallery-single.htm">3 Color Poster Design</a>For a regional festival event.</span>
+                    </li>
+
+                    <!-- Gallery Item 3 -->
+                    <li class="span3 gallery-item" data-id="id-3" data-type="web">
+                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                            <span class="gallery-icons">
+                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
+                                <a href="#" class="item-details-link"></a>
+                            </span>
+                        </span>
+                        <a href="gallery-single.htm"><%= image_tag("gallery/gallery-img-1-4col.jpg", alt: "Gallery") %>
+                        </a>
+                        <span class="project-details"><a href="gallery-single.htm">Ink Pen Illustration</a>Created for a best selling children's book.</span>
+                    </li>
+
+                    <!-- Gallery Item 4 -->
+                    <li class="span3 gallery-item" data-id="id-4" data-type="video">
+                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                            <span class="gallery-icons">
+                                <a href="img/gallery/gallery-img-1-full.jpg" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
+                                <a href="gallery-single.htm" class="item-details-link"></a>
+                            </span>
+                        </span>
+                        <a href="gallery-single.htm">
+                          <%= image_tag("gallery/gallery-img-1-4col.jpg", alt: "Gallery") %></a>
+                        <span class="project-details"><a href="gallery-single.htm">Custom Illustration</a>For an international add campaign.</span>
+                    </li>
+                </ul>
+                </div>
+            </div>
+ 
+    </div><!-- End Gallery Row -->
+    
+    <div class="row"><!-- Begin Bottom Section -->
+    
+      <!-- Blog Preview
+        ================================================== -->
+      <div class="span6">
+
+            <h5 class="title-bg">From the Blog 
+                <small>All the latest news</small>
+                <button id="btn-blog-next" class="btn btn-inverse btn-mini" type="button">&raquo;</button>
+                <button id="btn-blog-prev" class="btn btn-inverse btn-mini" type="button">&laquo;</button>
+            </h5>
+
+        <div id="blogCarousel" class="carousel slide ">
+
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+
+                 <!-- Blog Item 1 -->
+                <div class="active item">
+                    <a href="blog-single.htm">
+                      <%= image_tag("gallery/blog-med-img-1.jpg", class: "align-left blog-thumb-preview", alt: "" ) %>
+                    </a>
+                    <div class="post-info clearfix">
+                        <h4><a href="blog-single.htm">A subject that is beautiful in itself</a></h4>
+                        <ul class="blog-details-preview">
+                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> Sept 4, 2015<li>
+                            <li><i class="icon-user"></i><strong>Posted by:</strong> <a href="#" title="Link">Admin</a><li>
+                            <li><i class="icon-comment"></i><strong>Comments:</strong> <a href="#" title="Link">12</a><li>
+                            <li><i class="icon-tags"></i> <a href="#">photoshop</a>, <a href="#">tutorials</a>, <a href="#">illustration</a>
+                        </ul>
+                    </div>
+                    <p class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. <a href="#">Read more</a><p>
+                </div>
+
+                <!-- Blog Item 2 -->
+                 <div class="item">
+                    <a href="blog-single.htm">
+                      <%= image_tag("gallery/blog-med-img-1.jpg", alt: "", class: "align-left blog-thumb-preview" ) %>
+                    <div class="post-info clearfix">
+                        <h4><a href="blog-single.htm">A great artist is always before his time</a></h4>
+                        <ul class="blog-details-preview">
+                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> Sept 4, 2015<li>
+                            <li><i class="icon-user"></i><strong>Posted by:</strong> <a href="#" title="Link">Admin</a><li>
+                            <li><i class="icon-comment"></i><strong>Comments:</strong> <a href="#" title="Link">12</a><li>
+                            <li><i class="icon-tags"></i> <a href="#">photoshop</a>, <a href="#">tutorials</a>, <a href="#">illustration</a>
+                        </ul>
+                    </div>
+                    <p class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. <a href="#">Read more</a><p>
+                </div>
+
+                 <!-- Blog Item 3 -->
+                 <div class="item">
+                    <a href="blog-single.htm">
+                      <%= image_tag("gallery/blog-med-img-1.jpg", alt: "", class: "align-left blog-thumb-preview" ) %>
+                    <div class="post-info clearfix">
+                        <h4><a href="blog-single.htm">Is art everything to anybody?</a></h4>
+                        <ul class="blog-details-preview">
+                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> Sept 4, 2015<li>
+                            <li><i class="icon-user"></i><strong>Posted by:</strong> <a href="#" title="Link">Admin</a><li>
+                            <li><i class="icon-comment"></i><strong>Comments:</strong> <a href="#" title="Link">12</a><li>
+                            <li><i class="icon-tags"></i> <a href="#">photoshop</a>, <a href="#">tutorials</a>, <a href="#">illustration</a>
+                        </ul>
+                    </div>
+                    <p class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. <a href="#">Read more</a><p>
+                </div>
+                
+            </div>
+            </div>  
+        </div>
+        
+        <!-- Client Area
+        ================================================== -->
+        <div class="span6">
+
+            <h5 class="title-bg">Recent Clients
+                <small>That love us</small>
+                <button id="btn-client-next" class="btn btn-inverse btn-mini" type="button">&raquo;</button>
+                <button id="btn-client-prev" class="btn btn-inverse btn-mini" type="button">&laquo;</button>
+            </h5>
+
+            <!-- Client Testimonial Slider-->
+            <div id="clientCarousel" class="carousel slide no-margin">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+
+                <div class="active item">
+                    <p class="quote-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Morbi blandit ultricies ultrices. Vivamus nec lectus sed orci molestie molestie."<cite>- Client Name, Big Company</cite></p>
+                </div>
+
+                <div class="item">
+                    <p class="quote-text">"Adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Morbi blandit ultricies ultrices. Vivamus nec lectus sed orci molestie molestie."<cite>- Another Client Name, Company Name</cite></p>
+                </div>
+
+                <div class="item">
+                    <p class="quote-text">"Mauris eget tellus sem. Cras sollicitudin sem eu elit aliquam quis condimentum nulla suscipit. Nam sed magna ante. Ut eget suscipit mauris."<cite>- On More Client, The Company</cite></p>
+                </div>
+                
+            </div>
+            </div>
+
+            <!-- Client Logo Thumbs-->
+            <ul class="client-logos">
+                <li><a href="#" class="client-link">
+                  <%= image_tag("gallery/client-img-1.png", alt: "Client" ) %>
+                  </a>
+                </li>
+                <li><a href="#" class="client-link">
+                  <%= image_tag("gallery/client-img-2.png", alt: "Client" ) %>
+                  </a>
+                </li>
+                <li><a href="#" class="client-link">
+                  <%= image_tag("gallery/client-img-3.png", alt: "Client" ) %>
+                  </a>
+                </li>
+                <li><a href="#" class="client-link">
+                  <%= image_tag("gallery/client-img-4.png", alt: "Client" ) %>
+                  </a>
+                </li>
+                <li><a href="#" class="client-link">
+                  <%= image_tag("gallery/client-img-5.png", alt: "Client" ) %>
+                  </a>
+                </li>
+            </ul>
+
+        </div>
+        
+    </div><!-- End Bottom Section -->
+    
+    </div> <!-- End Container -->
+
+    <!-- Footer Area
+        ================================================== -->
+
+  <div class="footer-container"><!-- Begin Footer -->
+      <div class="container">
+          <div class="row footer-row">
+                <div class="span3 footer-col">
+                    <h5>About Us</h5>
+                    <%= image_tag("piccolo-footer-logo.png", alt: "Piccolo" ) %>
+                   <br /><br />
+                    <address>
+                        <strong>Design Team</strong><br />
+                        123 Main St, Suite 500<br />
+                        New York, NY 12345<br />
+                    </address>
+                    <ul class="social-icons">
+                        <li><a href="#" class="social-icon facebook"></a></li>
+                        <li><a href="#" class="social-icon twitter"></a></li>
+                        <li><a href="#" class="social-icon dribble"></a></li>
+                        <li><a href="#" class="social-icon rss"></a></li>
+                        <li><a href="#" class="social-icon forrst"></a></li>
+                    </ul>
+                </div>
+                <div class="span3 footer-col">
+                    <h5>Latest Tweets</h5>
+                    <ul>
+                        <li><a href="#">@room122</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li><a href="#">@room122</a> In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Morbi blandit ultricies ultrices.</li>
+                        <li><a href="#">@room122</a> Vivamus nec lectus sed orci molestie molestie. Etiam mattis neque eu orci rutrum aliquam.</li>
+                    </ul>
+                </div>
+                <div class="span3 footer-col">
+                    <h5>Latest Posts</h5>
+                     <ul class="post-list">
+                        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                        <li><a href="#">Consectetur adipiscing elit est lacus gravida</a></li>
+                        <li><a href="#">Lectus sed orci molestie molestie etiam</a></li>
+                        <li><a href="#">Mattis consectetur adipiscing elit est lacus</a></li>
+                        <li><a href="#">Cras rutrum, massa non blandit convallis est</a></li>
+                    </ul>
+                </div>
+                <div class="span3 footer-col">
+                    <h5>Flickr Photos</h5>
+                    <ul class="img-feed">
+                        <li><a href="#"><%= image_tag("gallery/flickr-img-1.jpg", alt: "Image Feed" ) %></a></li>
+                        <li><a href="#"><%= image_tag("gallery/flickr-img-1.jpg", alt: "Image Feed" ) %></a></li>
+                        <li><a href="#"><%= image_tag("gallery/flickr-img-1.jpg", alt: "Image Feed" ) %></a></li>
+                        <li><a href="#"><%= image_tag("gallery/flickr-img-1.jpg", alt: "Image Feed" ) %></a></li>
+                        <li><a href="#"><%= image_tag("gallery/flickr-img-1.jpg", alt: "Image Feed" ) %></a></li>
+                        <li><a href="#"><%= image_tag("gallery/flickr-img-1.jpg", alt: "Image Feed" ) %></a></li>
+                        <li><a href="#"><%= image_tag("gallery/flickr-img-1.jpg", alt: "Image Feed" ) %></a></li>
+                        <li><a href="#"><%= image_tag("gallery/flickr-img-1.jpg", alt: "Image Feed" ) %></a></li>
+                        <li><a href="#"><%= image_tag("gallery/flickr-img-1.jpg", alt: "Image Feed" ) %></a></li>
+                        <li><a href="#"><%= image_tag("gallery/flickr-img-1.jpg", alt: "Image Feed" ) %></a></li>
+                        <li><a href="#"><%= image_tag("gallery/flickr-img-1.jpg", alt: "Image Feed" ) %></a></li>
+                        <li><a href="#"><%= image_tag("gallery/flickr-img-1.jpg", alt: "Image Feed" ) %></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row"><!-- Begin Sub Footer -->
+                <div class="span12 footer-col footer-sub">
+                    <div class="row no-margin">
+                        <div class="span6"><span class="left">Copyright 2012 Piccolo Theme. All rights reserved.</span></div>
+                        <div class="span6">
+                            <span class="right">
+                            <a href="#">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Gallery</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Blog</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Contact</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Sub Footer -->
+
+        </div>
+    </div><!-- End Footer --> 
+    
+    <!-- Scroll to Top -->  
+    <div id="toTop" class="hidden-phone hidden-tablet">Back to Top</div>
+    
+</body>
+</html>
