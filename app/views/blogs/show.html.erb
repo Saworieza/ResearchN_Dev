@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
-<%= image_tag @blog.image.url(:medium) %>
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
 
 <p>
-  <strong>Post:</strong>
+  <strong>
+  <%= @blog.title %>
+  </strong>
+</p>
+<%= image_tag @blog.image.url(:medium) %>
+<p>
+  <strong></strong><br>
   <%= @blog.post %>
 </p>
 

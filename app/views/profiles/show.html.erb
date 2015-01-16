@@ -7,9 +7,27 @@
 </p>
 
 <p>
-  <strong>Short description:</strong>
+  <strong>Short description:</strong><br>
   <%= @profile.short_description %>
 </p>
+
+<p>
+  <strong>Technical Bucket:</strong><br>
+  <%= @profile.technical_bucket %>
+</p>
+
+<p>
+  <strong>Residence:</strong><br>
+  <%= @profile.residence %>
+</p>
+
+<p>
+  <strong>Nationality:</strong><br>
+  <%= @profile.nationality %>
+</p>
+
+
+
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>

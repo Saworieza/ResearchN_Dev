@@ -2,7 +2,7 @@
     <!-- Blog Content
     ================================================== --> 
     <div class="row">
-
+<%= link_to 'New Blog', new_blog_path %>
         <!-- Blog Posts
         ================================================== --> 
         <div class="span8 blog">
@@ -14,10 +14,9 @@
                 <h3 class="title-bg"><%= blog.title %></h3>
                 <div class="post-summary">
                 <%= link_to (image_tag blog.image.url(:medium), alt: "Post Thumbs", width: "", height: ""), blog %>
-                <p><%= truncate(strip_tags(blog.post), length: 280) %></p>
+                <p><%= truncate(strip_tags(blog.post), length: 280) %><%= link_to 'Read more', blog, {:style => 'color: #006600'} %></p>
                 <div class="post-summary-footer">
-                        <%= link_to 'Read more', blog, class: "btn btn-small btn-inverse", type: "button" %>
-                        <!--<button class="btn btn-small btn-inverse" type="button">Read more</button>-->
+                        <%#= link_to 'Read more', blog, class: "btn btn-small btn-inverse", type: "button" %>
                         <ul class="post-data">
                             <li><i class="icon-calendar"></i> 09/04/15</li>
                             <li><i class="icon-user"></i> <a href="#">Admin</a></li>
@@ -31,8 +30,10 @@
               <% end %>
             </article>
 
-            <!-- Pagination. add Kaminari then remove this comment -->
+            <!-- Pagination-->
             <div class="pagination">
+            <%= will_paginate @blogs, :page_links=> false %>
+            
                 <ul>
                 <li class="active"><a href="#">Prev</a></li>
                 <li class="active"><a href="#">1</a></li>
@@ -209,38 +210,3 @@
 </html>
 
 
-
-
-
-
-
-
-
-<h1>Listing blogs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Post</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= link_to (image_tag blog.image.url(:medium)), blog %></td>
-        <td><%= blog.post %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Blog', new_blog_path %>
