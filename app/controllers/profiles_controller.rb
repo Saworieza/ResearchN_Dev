@@ -4,7 +4,8 @@ class ProfilesController < ApplicationController
   respond_to :html
 
   def index
-    @profiles = Profile.all
+    @profiles = Profile.paginate(page: params[:page], :per_page => 2)
+    #@profiles = Profile.all
     respond_with(@profiles)
   end
 

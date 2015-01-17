@@ -1,0 +1,13 @@
+<section class="comments">
+  <ul>
+    <li>
+    <%= image_tag('user-avatar.jpg', alt: "image") %>
+      <span class="comment-name"><%= comment.name %></span>
+      <span class="comment-date"><%= comment.created_at.strftime("%B %d, %Y") %> 
+      | <%= link_to 'Reply', new_blog_comment_path(@blog) %> 
+      | <%= link_to 'Delete', [comment.blog, comment], method: :delete, data: { confirm: 'Are you sure'} %>
+      </span>
+      <div class="comment-content"><%= comment.body %></div>
+    </li>
+  </ul>
+</section>
