@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   respond_to :html
 
@@ -24,6 +25,11 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
     @blog.save
     respond_with(@blog)
+    if @blog.save
+      format.js #will search for create.js.erb
+    else
+      format.html { render blogs_path }
+    end
   end
 
   def update
@@ -42,6 +48,6 @@ class BlogsController < ApplicationController
     end
 
     def blog_params
-      params.require(:blog).permit(:title, :post, :image)
+      params.require(:blog).permit(:title, :post, :image, :all_tags)
     end
 end

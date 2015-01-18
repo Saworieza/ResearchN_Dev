@@ -1,6 +1,7 @@
 <section class="comments">
   <ul>
     <li>
+    <%= link_to image_tag(comment.image.url(:small), alt: "author") %>
     <%= image_tag('user-avatar.jpg', alt: "image") %>
       <span class="comment-name"><%= comment.name %></span>
       <span class="comment-date"><%= comment.created_at.strftime("%B %d, %Y") %> 

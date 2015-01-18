@@ -10,19 +10,23 @@
 
             <!-- Blog Post 1 -->
             <article>
-                <h3 class="title-bg"><%= @blog.title %></h3>
-                <div class="post-summary-footer">
-                        <ul class="post-data">
-                        	<%= link_to 'Edit', edit_blog_path(@blog) %> |
-							<%= link_to 'Back', blogs_path %>
-                        </ul>
-                    </div>
+                <h3 class="title-bg">
+                    <%= @blog.title %>
+                </h3>
+                
                 <div class="post-content">
+                <div class="post-summary-footer">
+                    <ul class="post-data" style="position:relative;">
+                        <%= link_to 'Edit Post', edit_blog_path(@blog) %> |
+                        <%= link_to 'Delete Post', @blog, method: :delete, data: { confirm: 'Sure?' } %> |
+                        <%= link_to 'Back to Blog', blogs_path %>
+                    </ul>
+                </div>
                 	<%= link_to image_tag(@blog.image.url(:medium), alt: "Post Thumb") %>
                     <div class="post-body">
                         <p><%= @blog.post %></p>
                         <%# find a way to split the post at certain areas and insert these in between. this is an order%>
-                        <p class="well"><a href="#" rel="tooltip" title="An important message">Proin tristique</a> tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui.</p>
+                        <p class="well"><a href="#" rel="tooltip" title="An important message">Proin tristique</a> tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum.</p>
 
                        <p> Nam sit amet felis non lorem faucibus rhoncus vitae id dui. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui.</p>
 
@@ -47,9 +51,10 @@
             <!-- About the Author -->
             <section class="post-content">
                 <div class="post-body about-author">
+                    
                 	<%= image_tag('author-avatar.jpg', alt: "author")%>
                     <h4>About Nathan Brown</h4>
-                    Proin tristique tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui.
+                    Proin tristique tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna <a href="#">Read more ...</a>
                 </div>
             </section>
 
