@@ -1,4 +1,14 @@
 <h1>Listing kids</h1>
+<% @events.each do |event| %>
+  <h3><%= event.title %> »</h3>
+  <p>
+    <%= truncate(strip_tags(event.detail), length: 70) %>
+    <br>
+    <a href="">Read more »</a>
+  </p>
+  <hr>
+<% end %>
+
 
 <table>
   <thead>

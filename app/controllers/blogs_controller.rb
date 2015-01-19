@@ -5,8 +5,14 @@ class BlogsController < ApplicationController
   respond_to :html
 
   def index
-    @blogs = Blog.paginate(page: params[:page], :per_page => 3)
+    @blogs = Blog.paginate(page: params[:page], :per_page => 3) 
     respond_with(@blogs)
+
+    if params[:tag]
+      @blogs = Blog.tagged_with(params[:tag])
+    else
+      @blogs = Blog.paginate(page: params[:page], :per_page => 3) 
+    end
   end
 
   def show
@@ -25,11 +31,13 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
     @blog.save
     respond_with(@blog)
+=begin
     if @blog.save
       format.js #will search for create.js.erb
     else
       format.html { render blogs_path }
     end
+=end    
   end
 
   def update

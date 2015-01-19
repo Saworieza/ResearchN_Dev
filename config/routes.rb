@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :events
+
+  get 'tags/:tag', to: 'blogs#index', as: "tag" 
   get 'users/new'
 
   resources :profiles

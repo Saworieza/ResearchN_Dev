@@ -6,7 +6,8 @@ class KidsController < ApplicationController
   def index
     @kids = Kid.all
     respond_with(@kids)
-  end
+    #@events = Event.all
+  end 
 
   def show
     respond_with(@kid)

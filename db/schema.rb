@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150117084753) do
+ActiveRecord::Schema.define(version: 20150119030035) do
 
   create_table "blogs", force: true do |t|
     t.string   "title"
@@ -37,6 +37,21 @@ ActiveRecord::Schema.define(version: 20150117084753) do
   end
 
   add_index "comments", ["blog_id"], name: "index_comments_on_blog_id"
+
+  create_table "events", force: true do |t|
+    t.string   "title"
+    t.text     "details"
+    t.string   "organizer"
+    t.date     "date"
+    t.time     "start"
+    t.time     "end"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
   create_table "galleries", force: true do |t|
     t.datetime "created_at"

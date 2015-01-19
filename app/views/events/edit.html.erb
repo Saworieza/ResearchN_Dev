@@ -1,0 +1,6 @@
+<h1>Editing event</h1>
+<%= image_tag @event.image.url(:medium) %><%# show which image you are editing%>
+<%= render 'form' %>
+
+<%= link_to 'Show', @event %> |
+<%= link_to 'Back', events_path %>
